@@ -1,0 +1,385 @@
+
+
+######################################################### testing
+declare -a arr=(" -   The Story of Fallout 1 "
+    " - Fallout 1 Lore"
+    " - Fallout 1 Lore"
+    " - Fallout 1"
+    " - Fallout 3 Lore"
+    " - Fallout 3"
+    " - Fallout Lore"
+    " - Fallout New Vegas Lore"
+    " - Fallout New Vegas"
+    " - Fallout"
+    " Fallout 3 Lore"
+    " Fallout Lore"
+    " Fallout New Vegas Lore"
+    "-Fallout 2 Lore"
+    "-Fallout 3 Lore"
+    "-The Story of Fallout 2 "
+    "F2 "
+    "F3 "
+    "The Full Story of Fallout 1 "
+    "The Full Story of Fallout New Vegas "
+    "The Story of Fallout 1 "
+    "The Story of Fallout New Vegas "
+    "   with John Oliver-HBO-"
+    "Defunctland - "
+    "Defunctland_ "
+    "DefunctTV - "
+    "    with John Oliver (HBO) "
+    "   with John Oliver-Web Exclusive-"
+    "   with John Oliver (HBO) "
+    "  with John Oliver-"
+    "    with John Oliver "
+    " with John Oliver (HBO)"
+    " with John Oliver"
+                )
+
+for v in "${arr[@]}"
+do
+   v="${a}${v}${a}"
+   echo "$v"
+   # or do whatever with individual element of the array
+done
+
+
+# Remove name of the directory from within the file name
+for i in *;do
+  if 
+  [[ "$i" == *"$UPDI"* ]];then
+    rename "s/$UPDI/ /g" "$i"
+  fi
+done
+
+
+
+# bash for loop array to iterate through array values
+for i in "${arrayName[@]}"
+do
+   : 
+   # do whatever on "$i" here
+done
+
+for i in *;do
+
+
+
+   echo "$i"
+
+   done
+done
+
+for i in *;do
+
+
+
+   echo "$i"
+
+   done
+done
+
+
+
+
+
+
+for i in *;do
+    for v in "${arr[@]}";do
+      v="${a}${v}${a}"
+      if
+      [[ "$i" == *"${v}"* ]];then
+      #rename "s/$v/ /g" "$i"
+      echo "$v"
+      echo "$i"
+      fi
+    done
+done
+
+
+
+
+
+
+' ${arr[*]} '
+''
+
+
+
+for i in *;do
+
+
+  if [[ " ${i} " =~ " ${arr[*]} " ]]; then
+    # whatever you want to do when array contains value
+    echo "$i"
+  fi
+
+
+done
+
+
+for i in *;do
+
+
+[[ " ${arr[*]} " =~ " ${i} " ]] && echo "true" || echo "false"
+
+
+done
+
+
+
+
+for v in "${arr[@]}";do
+    v="${a}${v}${a}"
+        for i in *;do
+          if
+          [[ "$i" == *"${v}"* ]];then
+          #rename "s/$v/ /g" "$i"
+          echo "$v"
+          echo "$i"
+          fi
+        done
+done
+
+
+
+set +e #otherwise the script will exit on error
+containsElement () {
+  local e match="$1"
+  shift
+  for e; do [[ "$e" == "$match" ]] && return 0; done
+  return 1
+}
+
+
+containsElement "${i}" "${arr[@]}"
+
+
+for i in *;do
+
+
+  containsElement "$i" "${arr[@]}"
+  echo $?
+
+done
+
+
+case "${arr[@]}" in  *"${i}"*) echo "found" ;; esac
+found
+
+printf '%s\0' "${arr[@]}" | grep -F -x -z -- "$i"
+
+
+
+
+
+inarray=$(echo ${arr[@]} | grep -ow "${i}" | wc -w)
+
+
+
+find_in_array() {
+  local word=$1
+  shift
+  for e in "$@"; do [[ "$e" == "$word" ]] && return 0; done
+  return 1
+}
+
+
+
+
+
+
+
+for i in *;do
+  [[ ${arr[*]} =~ *"${i}"* ]] && echo 'yes' || echo 'no'
+done
+
+
+
+find_fiLe () {
+        for i in *;do   
+          if    
+          [[ "$i" == *"${q}"* ]];then     
+          echo "${i}"   
+          fi 
+        done
+}
+
+
+q=" with John Oliver (HBO)"
+find_fiLe
+
+
+
+array=( "abcd" "01.wr" "ef_gh" )
+unset found
+for e in "${array[@]}" ; do
+    if [[ $e == +([0-9]).wr ]] ; then
+        found=$e
+        break
+    fi
+done
+
+[[ $found ]] && echo "$found"
+
+
+
+function in_array_1() {
+    local needle="$1" item
+    local -n arrref="$2"
+    for item in "${arrref[@]}"; do
+        [[ "${item}" == "${needle}" ]] && return 0
+    done
+    return 1
+}
+
+
+
+
+
+
+
+# Check if array contains item [$1: item, $2: name of array map]
+function in_array_9() {
+    local needle="$1"
+    local -n mapref="$2"
+    [[ -n "${mapref["${needle}"]+set}" ]] && return 0 || return 1
+}
+
+
+
+
+
+
+
+
+
+
+declare -a arr21
+for file in *.webm
+do
+    arr21=("${arr21[@]}" "$file")
+done
+
+
+
+echo "${arr21[@]}"
+
+
+
+
+
+
+for v in "${arr[@]}"
+do
+   if [[ " ${arr21[*]} " =~ " *{$v}* " ]]; then
+     # whatever you want to do when array contains value
+     echo "$v"
+   fi
+   
+   # or do whatever with individual element of the array
+done
+
+
+find_fiLe () {
+        for i in *;do   
+          if    
+          [[ "$i" == *"${q}"* ]];then     
+          echo "${i}"   
+          fi 
+        done
+}
+
+
+for v in "${arr[@]}"
+do
+    echo $v
+    q="${v}"
+    find_fiLe
+done
+
+
+for v in "${arr[@]}"
+  do
+    v="${a}${v}${a}" 
+    echo $v
+  done
+
+
+
+
+
+
+
+echo "${arr[*]}"
+
+
+
+Loop (){
+  for item in ${@} ; 
+    do   
+      a='"'
+      item="${a}${item}${a}" 
+      echo "${item}" 
+    done
+}
+
+Loop "${arr[*]}"
+
+
+
+
+######################################################### Example
+
+## declare an array variable
+declare -a arr=("element1" 
+                "element2" "element3"
+                "element4"
+                )
+
+for i in "${arr[@]}"
+do
+   echo "$i"
+   # or do whatever with individual element of the array
+done
+
+
+
+array=( "abcd" "01.wr" "ef_gh" )
+unset found
+for e in "${arr[@]}" ; do
+    if [[ $e == +([0-9]).wr ]] ; then
+        found=$e
+        break
+    fi
+done
+
+[[ $found ]] && echo "$found"
+
+######################################################## Snippets 
+
+# Remove name of the directory from within the file name
+for i in *;do
+  if 
+  UPDI="$(pwd | sed 's:.*/::')" 
+  [[ "$i" == *"$UPDI"* ]];then
+    rename "s/$UPDI/ /g" "$i"
+  fi
+done
+
+
+
+# bash for loop array to iterate through array values
+for i in "${arrayName[@]}"
+do
+   : 
+   # do whatever on "$i" here
+done
+
+
+#bash loop through an array of strings
+array=( one two three )
+for i in "${array[@]}"
+do
+	echo "$i"
+done
