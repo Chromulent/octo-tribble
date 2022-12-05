@@ -8,5 +8,5 @@
        fi
 }
 
-yes_no_whiptail
+# yes_no_whiptail
 
