@@ -35,6 +35,8 @@ declare -a arr=(" -   The Story of Fallout 1 "
 	"Last Week Tonight With John Oliver"
 	" - Last Week Tonight with John Oliver HBO"
   "HBO"
+  "True Facts_ "
+  "True Facts About "
 	
                 )
 
