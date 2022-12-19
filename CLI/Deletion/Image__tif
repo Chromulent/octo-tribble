@@ -1,0 +1,7 @@
+
+find . -name "*.tif" -type f -delete
+
+
+# if file is smaller than 160k
+
+find . -name "*.tif" -type 'f' -size -160k -delete

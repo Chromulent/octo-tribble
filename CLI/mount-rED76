@@ -1,0 +1,14 @@
+
+mount -t cifs -o username=blackwood,password=axiom1 //192.168.1.173/d /mnt/rBin76_D 
+mount -t cifs -o username=blackwood,password=axiom1 //192.168.1.173/e /mnt/rBin76_E 
+
+sudo -i 
+
+
+javalen-hook9
+
+
+
+
+
+cd /mnt/OpenDrive/Videos/

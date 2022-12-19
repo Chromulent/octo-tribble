@@ -1,0 +1,388 @@
+# Replace all underscores with spaces
+for i in *;do
+  if 
+  [[ "$i" == *"_"* ]];then
+  rename "s/_/ /g" "$i"
+  fi
+done
+
+# Remove name of the directory from within the file name
+for i in *;do
+  if 
+  UPDI="$(pwd | sed 's:.*/::')" 
+  [[ "$i" == *"$UPDI"* ]];then
+    sudo rename "s/$UPDI/ /g" "$i"
+  fi
+done
+
+# Remove floating letters
+for i in *;do
+  if 
+  [[ "$i" == *" -s"* ]];then
+  sudo rename "s/ -s/s/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"_s"* ]];then
+  sudo rename "s/_s/s/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" s"* ]];then
+  sudo rename "s/ s/s/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"_m"* ]];then
+  sudo rename "s/_m/m/g" "$i"
+  fi
+done
+for i in *;do
+  if 
+  [[ "$i" == *" m"* ]];then
+  sudo rename "s/ m/m/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"_t"* ]];then
+  sudo rename "s/_t/t/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" t"* ]];then
+  sudo rename "s/ t/t/g" "$i"
+  fi
+done
+
+# Remove trailing hyphens left after removal of creator names
+for i in *;do
+  if 
+  [[ "$i" == *" - - "* ]];then
+  sudo rename "s/ - - / - /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"_ "* ]];then
+  rename "s/_ / - /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"  - "* ]];then
+  rename "s/  - / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" -"* ]];then
+  rename "s/ -/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - - "* ]];then
+  rename "s/ - - / - /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"  - "* ]];then
+  rename "s/  - / - /g" "$i"
+  fi
+done
+
+# Remove incredibly specific content for specific Creators that do not use standard naming convetions
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout New Vegas Lore"* ]];then
+  sudo rename "s/ - Fallout New Vegas Lore/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" Fallout 3 Lore"* ]];then
+  sudo rename "s/ Fallout 3 Lore/ /g" "$i"
+  fi
+done
+
+
+for i in *;do
+  if 
+  [[ "$i" == *" Fallout New Vegas Lore"* ]];then
+  sudo rename "s/ Fallout New Vegas Lore/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout New Vegas"* ]];then
+  sudo rename "s/ - Fallout New Vegas/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout Lore"* ]];then
+  sudo rename "s/ - Fallout Lore/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"The Full Story of Fallout 1 "* ]];then
+  sudo rename "s/The Full Story of Fallout 1 / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" -   The Story of Fallout 1 "* ]];then
+  sudo rename "s/ -   The Story of Fallout 1 / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout 1"* ]];then
+  sudo rename "s/ - Fallout -/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout 1 Lore"* ]];then
+  sudo rename "s/ - Fallout 1 Lore/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout 1 Lore"* ]];then
+  sudo rename "s/ - Fallout 1 Lore/ /g" "$i"
+  fi
+done
+
+
+
+
+
+
+for i in *;do
+  if 
+  [[ "$i" == *" Fallout Lore"* ]];then
+  sudo rename "s/ Fallout Lore/ /g" "$i"
+  fi
+done
+
+
+for i in *;do
+  if 
+  [[ "$i" == *"The Story of Fallout New Vegas "* ]];then
+  sudo rename "s/The Story of Fallout New Vegas / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"The Full Story of Fallout New Vegas "* ]];then
+  sudo rename "s/The Full Story of Fallout New Vegas / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"-Fallout 2 Lore"* ]];then
+  sudo rename "s/-Fallout 2 Lore/ /g" "$i"
+  fi
+done
+
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout 3 Lore"* ]];then
+  sudo rename "s/ - Fallout 3 Lore/ /g" "$i"
+  fi
+done
+
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout 3"* ]];then
+  sudo rename "s/ - Fallout 3/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"-Fallout 3 Lore"* ]];then
+  sudo rename "s/-Fallout 3 Lore/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" - Fallout"* ]];then
+  sudo rename "s/ - Fallout/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"-The Story of Fallout 2 "* ]];then
+  sudo rename "s/-The Story of Fallout 2 / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"The Story of Fallout 1 "* ]];then
+  sudo rename "s/The Story of Fallout 1 / /g" "$i"
+  fi
+done
+
+
+
+for i in *;do
+  if 
+  [[ "$i" == *"F2 "* ]];then
+  sudo rename "s/F2 / /g" "$i"
+  fi
+done
+
+
+for i in *;do
+  if 
+  [[ "$i" == *"F3 "* ]];then
+  sudo rename "s/F3 / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"   with John Oliver-HBO-"* ]];then
+  sudo rename "s/   with John Oliver-HBO-/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"    with John Oliver (HBO) "* ]];then
+  sudo rename "s/    with John Oliver (HBO) / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"   with John Oliver-Web Exclusive-"* ]];then
+  sudo rename "s/   with John Oliver-Web Exclusive-/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"   with John Oliver (HBO) "* ]];then
+  sudo rename "s/   with John Oliver (HBO) / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"  with John Oliver-"* ]];then
+  sudo rename "s/  with John Oliver-/ /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"    with John Oliver "* ]];then
+  sudo rename "s/    with John Oliver / /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"Worst MMO Ever-"* ]];then
+  sudo rename "s/Worst MMO Ever-/Worst MMO Ever - /g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"Worst MMO Ever  -"* ]];then
+  sudo rename "s/Worst MMO Ever  -/Worst MMO Ever - /g" "$i"
+  fi
+done
+
+# Remove trailing and leading white space at the start and end of files
+for i in *;do
+  if 
+  [[ "$i" == *"$i"* ]];then
+  p="$(echo "${i}" | xargs)"
+    sudo mv "$i" "$p"
+  fi
+done
+
+# Remove remaining spaces before extensions
+for i in *;do
+  if 
+  [[ "$i" == *"_ .webm"* ]];then
+  sudo rename "s/_ .webm/.webm/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" .webm"* ]];then
+  sudo rename "s/ .webm/.webm/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" .avi"* ]];then
+  sudo rename "s/ .avi/.avi/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" .mkv"* ]];then
+  sudo rename "s/ .mkv/.mkv/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *" .mp4"* ]];then
+  sudo rename "s/ .mp4/.mp4/g" "$i"
+  fi
+done
+
+for i in *;do
+  if 
+  [[ "$i" == *"..mp4"* ]];then
+  rename "s/..mp4/.mp4/g" "$i"
+  fi
+done
+
+# Set permissions on all files in this directory to meet the stanard that we are looking for
+
+sudo chmod -R 777 .

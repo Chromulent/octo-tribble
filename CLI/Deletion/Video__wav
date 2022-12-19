@@ -1,0 +1,4 @@
+
+
+find . -name "*.wav" -type f -delete
+

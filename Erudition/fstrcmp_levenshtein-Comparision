@@ -1,0 +1,50 @@
+fstrcmp_levenshtein-Comparision
+
+
+apt install fstrcmp -y 
+
+
+fstrcmp "Some string" "Some string"
+1.0000
+fstrcmp "Some string" "Other string"
+0.6957
+fstrcmp "Some string" "Pangalactic garglebalster"
+0.2222
+
+
+
+https://fstrcmp.sourceforge.net/
+
+
+  The fstrcmp command understands the following options:
+
+       -a
+
+       --files-as-bytes
+               This  option  is used to compare two files as arrays of bytes.  See fmemcmp(3) for
+               more information.
+
+       -p
+
+       --pair  This option is used to compare two strings  as  arrays  of  bytes.   This  is  the
+               default.  See fstrcmp(3) for more information.
+
+       -s
+
+       --select
+               This  option  is  used  to  select  the  closest needle from the provided haystack
+               alternatives.   The  most  similar  (single)  choice  is  printed.   If  none  are
+               particularly  similar,  nothing  is printed.  See fstrcmp(3) for more information.
+               See below for example.
+
+       -V
+
+       --version
+               This option may be used to print the version of  the  fstrcmp  command,  and  then
+               exit.
+
+       -w
+
+       --wide-pair
+               This  option is used to compare two multi‐byte character strings.  See fstrcoll(3)
+               for more information.

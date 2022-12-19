@@ -1,0 +1,6 @@
+INDdir-Del-jpeg_if-jpg
+
+for f in *.jpeg; do
+  [ -e "${f%.*}.jpg" ] && echo rm -rf "$f"
+done
+

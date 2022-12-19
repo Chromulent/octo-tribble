@@ -1,0 +1,3 @@
+find . -name "*.nfo" -type f -delete
+
+

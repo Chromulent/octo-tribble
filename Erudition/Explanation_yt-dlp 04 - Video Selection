@@ -1,0 +1,70 @@
+Explanation_yt-dlp 04 - Video Selection
+
+-I, --playlist-items ITEM_SPEC  Comma separated playlist_index of the videos
+                                to download. You can specify a range using
+                                "[START]:[STOP][:STEP]". For backward
+                                compatibility, START-STOP is also supported.
+                                Use negative indices to count from the right
+                                and negative STEP to download in reverse
+                                order. Eg: "-I 1:3,7,-5::2" used on a
+                                playlist of size 15 will download the videos
+                                at index 1,2,3,7,11,13,15
+--min-filesize SIZE             Do not download any videos smaller than SIZE
+                                (e.g. 50k or 44.6m)
+--max-filesize SIZE             Do not download any videos larger than SIZE
+                                (e.g. 50k or 44.6m)
+--date DATE                     Download only videos uploaded on this date.
+                                The date can be "YYYYMMDD" or in the format 
+                                [now|today|yesterday][-N[day|week|month|year]].
+                                Eg: --date today-2weeks
+--datebefore DATE               Download only videos uploaded on or before
+                                this date. The date formats accepted is the
+                                same as --date
+--dateafter DATE                Download only videos uploaded on or after
+                                this date. The date formats accepted is the
+                                same as --date
+--match-filters FILTER          Generic video filter. Any "OUTPUT TEMPLATE"
+                                field can be compared with a number or a
+                                string using the operators defined in
+                                "Filtering Formats". You can also simply
+                                specify a field to match if the field is
+                                present, use "!field" to check if the field
+                                is not present, and "&" to check multiple
+                                conditions. Use a "\" to escape "&" or
+                                quotes if needed. If used multiple times,
+                                the filter matches if atleast one of the
+                                conditions are met. Eg: --match-filter
+                                !is_live --match-filter "like_count>?100 &
+                                description~='(?i)\bcats \& dogs\b'" matches
+                                only videos that are not live OR those that
+                                have a like count more than 100 (or the like
+                                field is not available) and also has a
+                                description that contains the phrase "cats &
+                                dogs" (caseless). Use "--match-filter -" to
+                                interactively ask whether to download each
+                                video
+--no-match-filter               Do not use generic video filter (default)
+--no-playlist                   Download only the video, if the URL refers
+                                to a video and a playlist
+--yes-playlist                  Download the playlist, if the URL refers to
+                                a video and a playlist
+--age-limit YEARS               Download only videos suitable for the given
+                                age
+--download-archive FILE         Download only videos not listed in the
+                                archive file. Record the IDs of all
+                                downloaded videos in it
+--no-download-archive           Do not use archive file (default)
+--max-downloads NUMBER          Abort after downloading NUMBER files
+--break-on-existing             Stop the download process when encountering
+                                a file that is in the archive
+--break-on-reject               Stop the download process when encountering
+                                a file that has been filtered out
+--break-per-input               Make --break-on-existing, --break-on-reject
+                                and --max-downloads act only on the current
+                                input URL
+--no-break-per-input            --break-on-existing and similar options
+                                terminates the entire download queue
+--skip-playlist-after-errors N  Number of allowed failures until the rest of
+                                the playlist is skipped
+                                
+

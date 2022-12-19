@@ -1,0 +1,12 @@
+
+find . -name '*.aac' -exec sh -c 'ffmpeg -i "$0" -codec: copy "${0%%.aac}.m4a"' {} \;
+
+
+
+
+
+
+for f in *.aac; do ffmpeg -i "$f"  -codec: copy "${f%.aac}.m4a"; done
+
+
+

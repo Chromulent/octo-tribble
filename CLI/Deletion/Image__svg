@@ -1,0 +1,2 @@
+
+find . -name "*.svg" -type f -delete

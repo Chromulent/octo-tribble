@@ -1,0 +1,17 @@
+find . -type f |  egrep -o "\.[a-zA-Z0-9]+$" | sort -u | LC_ALL=C xargs -I '%' find . -type f -name "*%" -exec du -ch {} + -exec echo % \; | egrep "^\.[a-zA-Z0-9]+$|total$" | uniq | paste - -
+
+
+# The part that gets the extension :
+find . -type f |  egrep -o "\.[a-zA-Z0-9]+$" | sort -u
+
+
+# Next search for files with an extension and print it on screen :
+LC_ALL=C xargs -I '%' find . -type f -name "*%" -exec du -ch {} + -exec echo % \;
+
+
+# Next we want to keep the extension and the total: 
+egrep "^\.[a-zA-Z0-9]+$|total$" | uniq
+
+# And keep it all on the same line
+paste - -
+

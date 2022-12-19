@@ -1,0 +1,10 @@
+
+# Give list of all file types available
+
+find . -type f | sed -e 's/.*\.//' | sed -e 's/.*\///' | sort -u
+
+
+# Give list and totals of all files available within folder recursivley
+
+find . -type f | sed -e 's/.*\.//' | sed -e 's/.*\///' | sort | uniq -c | sort -rn
+

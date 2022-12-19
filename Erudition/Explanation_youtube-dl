@@ -1,0 +1,50 @@
+# youtube example
+
+youtube-dl -i --download-archive /home/blackwood/Downloads/.mydownloads --dateafter now-2day --format "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" --merge-output-format mp4 -o '/mnt/OpenDrive/Videos/YouTube/The Game Theorists/%(title)s.%(ext)s' "https://www.youtube.com/channel/UCo_IB5145EVNcf8hw1Kku7w"
+
+
+# youtube-dl Explanation
+
+
+# 1
+    # Start the download 
+
+youtube-dl -i 
+
+
+
+# 2 
+    # Check to see if we have downloaded a video before. If we have youtube-dl commands terminates. 
+    # If running against a channel or a playlist, then the video in that queue will be checked. If it has been downloaded; then it is skipped.
+
+ --download-archive /home/blackwood/Downloads/.mydownloads     
+
+
+# 3
+    # Check if the video, playlist, or channel is less than two days old.
+    # If running against a channel or playlist, then the video in the queue will be checked. If the video is older than 2 days, or has been downloaded previously, then it is skipped.
+
+ --dateafter now-2day 
+
+# 4 
+    # Set the format of the download to best for audio and video.
+
+ --format "bestvideo+bestaudio[ext=m4a]/bestvideo+bestaudio/best" 
+
+# 5    
+    # Merge the downloaded audio and video into high quality mp4
+
+--merge-output-format mp4 
+
+
+# 6 
+    # Output the audio, video, and combined merged output, into a predefined locatation, in the following format title.ext .
+
+ -o '/mnt/OpenDrive/Videos/YouTube/The Game Theorists/%(title)s.%(ext)s'   
+
+
+
+# 7 
+    # This is the video, playlist or channel that we are attempting to download the video contents of.
+
+"https://www.youtube.com/channel/UCo_IB5145EVNcf8hw1Kku7w"  

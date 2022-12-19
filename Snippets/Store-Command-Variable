@@ -1,0 +1,3 @@
+Store-Command-Variable
+
+p="$(echo "${i}" | xargs)"

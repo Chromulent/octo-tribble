@@ -1,0 +1,4 @@
+
+
+find . -name "*.mp4.part" -type f -delete
+

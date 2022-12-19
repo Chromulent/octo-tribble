@@ -1,0 +1,21 @@
+# This is an Example of output with two specified directories
+
+fdupes -rd /mnt/OpenDrive/Videos/YouTube/ /mnt/OpenDrive/Videos/Creators/
+
+[1] /mnt/OpenDrive/Videos/YouTube/ShoeOnhead/nice guys™ finish last.webm
+[2] /mnt/OpenDrive/Videos/Creators/ShoeOnhead/nice guystm finish last.webm
+
+
+# The first directory will be option [1] during the selection of removal during de-duplication.
+# Unless, multiple items in the same directory exist with the same hash to be removed.
+
+fdupes -rd /dir1 /dir2
+
+
+# So using the above we can conclude then, that we if we use this example:
+# Then all content within /dir2 will be deleted if it exists in /dir1
+# with no confirmation.
+
+fdupes -rdN /dir1 /dir2
+
+

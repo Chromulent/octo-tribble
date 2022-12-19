@@ -1,0 +1,24 @@
+Find Examples
+
+
+# If file is more than 1MB then delete
+find -type f \( -name "*.ext" \) -size +1M -exec rm {} +
+
+# If file is less than 1MB then delete
+find -type f \( -name "*.ext" \) -size -1M -exec rm {} +
+
+# If file is more than 500 MB then delete - Alternate Version 1
+find -type f -name *log -size +500M -delete
+
+# If file is less than 500 MB then delete - Alternate Version 1
+find -type f -name *log -size -500M -delete
+
+# Find any file extension that is not the one we specify, and if it is larger than 1MB, delete
+find . -type f ! -name '*.ext' -size +1M -delete
+
+# Find any file extension that is not the one we specify, and if it is smaller than 1MB, delete
+find . -type f ! -name '*.ext' -size -1M -delete
+
+# If any file of any extension has zero size then delete
+find . -size 0 | while read f; do rm "${f%.*}."* ; done
+

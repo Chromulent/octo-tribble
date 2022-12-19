@@ -1,0 +1,25 @@
+INdir-Part-Replace
+
+
+# This finds Part at the end of files, and then puts this and the number after it at the start of the file name.
+# This is mainly used becuase of Oxhorn
+
+for i in *;do
+  if 
+  [[ "$i" == *"Part "* ]];then
+	searchstring="Part "
+	num=${i#*$searchstring}
+	num=${num//".webm"/}
+	wb=.webm
+	pt='Part'
+	sp=' '
+	hy=-
+	j=${i//"Part "/}
+	j=${j/%????????/}
+
+	Fn=$pt$sp$num$sp$hy$sp$j$wb
+
+	sudo mv -n "$i" "$Fn"
+  fi
+done
+

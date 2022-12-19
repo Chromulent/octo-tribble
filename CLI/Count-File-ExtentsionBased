@@ -1,0 +1,32 @@
+
+
+# Video based
+
+find . -mindepth 1 -type f -name "*.ts" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.mp4" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.wav" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.mkv" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.avi" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.webm" -exec printf x \; | wc -c
+
+
+# Audio based
+
+
+find . -mindepth 1 -type f -name "*.flac" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.mp4" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.mp3" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.m4a" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.aac" -exec printf x \; | wc -c
+
+find . -mindepth 1 -type f -name "*.wav" -exec printf x \; | wc -c
+

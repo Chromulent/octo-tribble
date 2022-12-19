@@ -1,0 +1,2 @@
+find . -name "*.srt" -type f -delete
+

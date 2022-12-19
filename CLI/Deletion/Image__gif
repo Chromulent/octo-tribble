@@ -1,0 +1,4 @@
+
+
+find . -name "*.gif" -type f -delete
+

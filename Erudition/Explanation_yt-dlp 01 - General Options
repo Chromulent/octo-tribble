@@ -1,0 +1,81 @@
+Explanation_yt-dlp 01 - General Options
+
+
+
+-h, --help                      Print this help text and exit
+--version                       Print program version and exit
+-U, --update                    Update this program to the latest version
+--no-update                     Do not check for updates (default)
+-i, --ignore-errors             Ignore download and postprocessing errors.
+                                The download will be considered successful
+                                even if the postprocessing fails
+--no-abort-on-error             Continue with next video on download errors;
+                                e.g. to skip unavailable videos in a
+                                playlist (default)
+--abort-on-error                Abort downloading of further videos if an
+                                error occurs (Alias: --no-ignore-errors)
+--dump-user-agent               Display the current user-agent and exit
+--list-extractors               List all supported extractors and exit
+--extractor-descriptions        Output descriptions of all supported
+                                extractors and exit
+--force-generic-extractor       Force extraction to use the generic extractor
+--default-search PREFIX         Use this prefix for unqualified URLs. Eg:
+                                "gvsearch2:python" downloads two videos from
+                                google videos for the search term "python".
+                                Use the value "auto" to let yt-dlp guess
+                                ("auto_warning" to emit a warning when
+                                guessing). "error" just throws an error. The
+                                default value "fixup_error" repairs broken
+                                URLs, but emits an error if this is not
+                                possible instead of searching
+--ignore-config                 Don't load any more configuration files
+                                except those given by --config-locations.
+                                For backward compatibility, if this option
+                                is found inside the system configuration
+                                file, the user configuration is not loaded.
+                                (Alias: --no-config)
+--no-config-locations           Do not load any custom configuration files
+                                (default). When given inside a configuration
+                                file, ignore all previous --config-locations
+                                defined in the current file
+--config-locations PATH         Location of the main configuration file;
+                                either the path to the config or its
+                                containing directory ("-" for stdin). Can be
+                                used multiple times and inside other
+                                configuration files
+--flat-playlist                 Do not extract the videos of a playlist,
+                                only list them
+--no-flat-playlist              Extract the videos of a playlist
+--live-from-start               Download livestreams from the start.
+                                Currently only supported for YouTube
+                                (Experimental)
+--no-live-from-start            Download livestreams from the current time
+                                (default)
+--wait-for-video MIN[-MAX]      Wait for scheduled streams to become
+                                available. Pass the minimum number of
+                                seconds (or range) to wait between retries
+--no-wait-for-video             Do not wait for scheduled streams (default)
+--mark-watched                  Mark videos watched (even with --simulate)
+--no-mark-watched               Do not mark videos watched (default)
+--no-colors                     Do not emit color codes in output (Alias:
+                                --no-colours)
+--compat-options OPTS           Options that can help keep compatibility
+                                with youtube-dl or youtube-dlc
+                                configurations by reverting some of the
+                                changes made in yt-dlp. See "Differences in
+                                default behavior" for details
+--alias ALIASES OPTIONS         Create aliases for an option string. Unless
+                                an alias starts with a dash "-", it is
+                                prefixed with "--". Arguments are parsed
+                                according to the Python string formatting
+                                mini-language. Eg: --alias get-audio,-X
+                                "-S=aext:{0},abr -x --audio-format {0}"
+                                creates options "--get-audio" and "-X" that
+                                takes an argument (ARG0) and expands to
+                                "-S=aext:ARG0,abr -x --audio-format ARG0".
+                                All defined aliases are listed in the --help
+                                output. Alias options can trigger more
+                                aliases; so be careful to avoid defining
+                                recursive options. As a safety measure, each
+                                alias may be triggered a maximum of 100
+                                times. This option can be used multiple times
