@@ -29,6 +29,7 @@ cArray=( # Resolution
   "HDRip"
   "HDR" 
   "HDTV"
+  "HULU"
   "WEB"
   "WEB-DL"
   "WEBDL"
@@ -65,7 +66,7 @@ cArray=( # Resolution
   "AAC5"
   "AC3"
   "Atmos"
-  "DDP5"
+  "DDP5.1.H"
   "DDP"
   "FS97"
   "HEVC-PSA"
@@ -118,6 +119,8 @@ cArray=( # Resolution
   "iDiOTS"
   "sample"
   "spark"
+  "ION10"
+  "NTb"
 )
 
 #   Define array of Omission indicies word list
