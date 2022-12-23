@@ -34,11 +34,13 @@ cArray=( # Resolution
   "WEB-DL"
   "WEBDL"
   "WEBRip"
+  "REMUX"
   "XviD"
   "bdrip"
   "BR"
   "DC"
   "TELESYNC"
+  "TrueHD"
   # Encoding
   "5.1CH"
   "51CH"
@@ -60,6 +62,7 @@ cArray=( # Resolution
   "1.H"
   "10bit"
   "5.1"
+  "7.1"
   "6CH"
   "8CH"
   "AAC"
@@ -75,6 +78,9 @@ cArray=( # Resolution
   "x260bit"
   "UHD"
   "S95"
+  "EVC"
+  "DTS-D"
+  "MA"
   # Conditional Operators
   "Extended"  
   "EXTENDEUT"
@@ -82,6 +88,9 @@ cArray=( # Resolution
   "Upscaled"
   "ENG"
   "GRE"
+  "PROPER"
+  "Proper"
+  "proper"
   # Uploader
   "800MB"
   "B4ND1T69"
@@ -121,6 +130,9 @@ cArray=( # Resolution
   "spark"
   "ION10"
   "NTb"
+  "XViD"
+  "FiDELiO"
+  "FGT"
 )
 
 #   Define array of Omission indicies word list
