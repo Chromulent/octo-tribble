@@ -133,6 +133,8 @@ cArray=( # Resolution
   "XViD"
   "FiDELiO"
   "FGT"
+  "ShAaNi"
+  "RESTERED"
 )
 
 #   Define array of Omission indicies word list
@@ -147,8 +149,7 @@ iWordArray=( "Br"
 )
 
 #   Define array of Omission indicies Dot list
-iDotArray=( "H"
-  "ws"
+iDotArray=(  "ws"
   "com"
   "uhd"
   "Br"
