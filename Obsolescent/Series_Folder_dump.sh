@@ -54,6 +54,5 @@ for i in ${varArr[@]}; do
    cd ..
 ## Finally delete the directory
    rmdir "$i"
-
 done
 
