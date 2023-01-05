@@ -1,3 +1,5 @@
+#!/bin/sh
+
 
 if_webm_mp4_del () {
 for f in *.webm; do
@@ -7,4 +9,4 @@ done
 }
 
 
-if_webm_mp4_del
+# if_webm_mp4_del
