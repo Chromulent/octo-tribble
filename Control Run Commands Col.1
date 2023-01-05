@@ -1,0 +1,103 @@
+
+#=====[ DeDupe ]=====#
+
+##	Audio based ##
+
+# if aac exists as copy of m4a -- delete aac
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_aac-m4a.sh)
+if_aac_m4a_del
+
+# if ex1 exists as copy of ex2 -- delete ex1
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_flac-mp3.sh)
+if_flac_mp3_del
+
+## Graphical based ##
+
+# if webp exists as copy of png -- delete webp
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_webp-png.sh)
+if_webp_png_del
+
+
+## Videographical based ##
+
+# if ts exists as copy of mp4 -- delete ts
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_ts-mp4.sh)
+if_ts_mp4_del
+
+# if avi exists as copy of mp4 -- delete avi
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_avi-mp4.sh)
+if_avi_mp4_del
+
+# if avi exists as copy of webm -- delete avi
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_avi-webm.sh)
+if_avi_webm_del
+
+# if m4v exists as copy of mp4 -- delete m4v
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_m4v-mkv.sh)
+if_m4v_mkv_del
+
+# if mkv exists as copy of mp4 -- delete mkv
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/DeDupe/DeDupe_mkv-mp4.sh)
+if_mkv_mp4_del
+
+# if mp4 exists as copy of webm -- delete mp4
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_mp4-webm.sh)
+if_mp4_webm_del
+
+
+### Inverse of standard operations ### 
+
+# if webm exists as copy of mkv -- delete webm
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_webm-mkv.sh)
+if_webm_mkv_del
+
+# if webm exists as copy of mp4 -- delete webm
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/blob/main/CLI/DeDupe/DeDupe_webm-mp4.sh)
+if_webm_mp4_del
+
+
+#=====[ Transmutation ]=====#
+
+##	Audio based ##
+
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_aac-m4a.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_aac-m4a_v2.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_flac-mp3.sh)
+
+## Graphical based ##
+
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_webp-png.sh)
+
+## Videographical based ##
+
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_ts-mp4.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_avi-mp4.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_avi-webm.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_m4v-mkv.sh)
+
+
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_mkv-mp4.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_mkv-mp4-subs_soft.sh)
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_mkv-mp4-subs_hard.sh)
+
+
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/CLI/Transmutation/Convert_mp4-webm.sh)
+
+
+
+
+
+
+#=====[ Templates ]=====#
+
+#!/bin/sh
+
+
+
+
+
+source <(curl -L 
+)
+
+
+#=====[  ]=====#
