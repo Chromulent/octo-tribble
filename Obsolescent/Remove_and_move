@@ -1,0 +1,27 @@
+rm -rf 'I, Frankenstein (2014).mkv'
+rm -rf 'Interview with the Vampire The Vampire Chronicles (1994).mkv'
+rm -rf 'Iron Mask (2020).m4v'
+rm -rf 'It (2017).m4v'
+
+rm -rf 'Gangs of New York (2002).mkv'
+rm -rf 'The Hitchhiker'\''s Guide to the Galaxy (2005).mkv'
+
+
+
+mv *.mkv *.mp4 *.m4v *.avi /mnt/Mausoleum/sets/film
+
+
+mv *.mkv *.mp4 *.m4v *.avi '/mnt/Mausoleum/sets/tv/Just Shoot Me'
+
+
+
+mv *.webm '/mnt/Mausoleum/sets/animated/Bobs Burgers'
+
+
+
+mv *.mkv *.mp4 *.m4v *.avi /mnt/Mausoleum/sets/anime
+
+
+
+mv *.mkv *.mp4 *.m4v *.avi '/mnt/Mausoleum/sets/animated/Solar Opposites'
+
