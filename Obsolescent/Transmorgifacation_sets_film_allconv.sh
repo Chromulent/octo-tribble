@@ -40,8 +40,12 @@ for d in */ ; do
   if_mkv_mp4_del
   if_avi_mp4_del
   if_mp4_webm_del
-  cd ..
 done
+
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Functions/Report_Videos_inDir.sh)
+clear
+Video_Report
+
 
 
 
