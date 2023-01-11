@@ -1,25 +1,25 @@
 
-All rewatchable creators: 
+## All rewatchable creators: 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Creator-Target_All.sh)
 
-All creators A-Z that are not in the rewatchable creators list: 
+## All creators A-Z that are not in the rewatchable creators list: 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Creator_Target_Defined_ask.sh)
 
-All Creators from A to C : 
+## All Creators from A to C : 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Creator_Target_Defined_A-C.sh)
 
-All Creators from E to K : 
+## All Creators from E to K : 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Creator_Target_Defined_E-K.sh)
 
-All Creators from K to R : 
+## All Creators from K to R : 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Creator_Target_Defined_K-R.sh)
 
-All Creators from R to Z : 
+## All Creators from R to Z : 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Creator_Target_Defined_R-Z.sh)
 
