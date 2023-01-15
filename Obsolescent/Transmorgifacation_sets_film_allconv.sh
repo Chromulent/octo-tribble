@@ -1,4 +1,14 @@
 
+# function to set terminal title  
+set-title() {
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
+
+
 if_mkv_mp4_del () {
 for f in *.mkv; do
   [ -e "${f%.*}.mp4" ] && rm -rf "$f"
@@ -33,14 +43,28 @@ done
 
 for d in */ ; do
   cd "$d"
-  find . -name '*.avi' -exec sh -c 'ffmpeg -y -i $0 -x265-params crf=25 "${0%%.avi}.webm"' {} \;
-  for f in *.mkv; do ffmpeg -i "$f" -c copy "${f%.mkv}.mp4"; done
-  find . -name '*.mp4' -exec sh -c 'ffmpeg -i "$0" -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${0%%.mp4}.webm"' {} \;
+  UPDI="$(pwd | sed 's:.*/::')" 
+  set-title "$UPDI"
   if_very_smol_del
+  find . -name '*.avi' -exec sh -c 'ffmpeg -y -i "$0" -x265-params crf=25 "${0%%.avi}.webm"' {} \;
+  find . -name '*.mkv' -exec sh -c 'ffmpeg -y -i "$0" -c:v libx264 -preset medium -c:a aac "${0%%.mkv}.mp4"' {} \;
+  find . -name '*.mp4' -exec sh -c 'ffmpeg -y -i "$0" -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${0%%.mp4}.webm"' {} \;
+  if_very_smol_del
+  cd ..
+done
+
+for d in */ ; do
+  cd "$d"
+  UPDI="$(pwd | sed 's:.*/::')" 
+  set-title "$UPDI"
   if_mkv_mp4_del
   if_avi_mp4_del
   if_mp4_webm_del
+  cd ..
 done
+
+
+
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Functions/Report_Videos_inDir.sh)
 clear
