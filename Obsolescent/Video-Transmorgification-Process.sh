@@ -54,4 +54,5 @@
 
 
 
-# IF WEBM then move full name to new path
+# IF WEBM then move full name to new path based on root folder to move all files except for tv files, these need to have an exception created for them to
+move them and their directories to the proper location.
