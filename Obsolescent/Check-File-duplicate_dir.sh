@@ -1,14 +1,22 @@
 #!/bin/sh
 
-namebased_deduplication () {
-    # Store all files in this directory into an array
-    files=(*)
-    # duplicate the existing array for manipulation of elements
-    subarry=("${files[@]}") 
-    # using the increment value of i, iterate against the total number of items indexed in the array
-    for i in "${!files[@]}"; do
+
+
+coreVid="/mnt/OpenDrive/Videos/Film/*"
+MausVid="/mnt/Mausoleum/sets/film/*"
+setsVid="/mnt/OpenDrive/Videos/temp/sets/film/*"
+
+subarrCoreVid=("${coreVid[@]}") 
+subarrMausVid=("${MausVid[@]}") 
+subarrsetsVid=("${setsVid[@]}") 
+
+
+
+
+
+for i in "${!coreVid[@]}"; do
         # using the increment value and the duplicate array, create dynamic variable of element at the index location
-        searv="$(echo "${subarry[$i]}")"
+        searv="$(echo "${subarrCoreVid[$i]}")"
         # remove this value from the duplicate array at the index number that the increment value was last defined as
         unset 'subarry[$i]' 
         # using the increment value of n, iterate against the total number of items index in the duplicate array
@@ -27,18 +35,33 @@ namebased_deduplication () {
              fi
        done
     done
-}
 
-# Suggestions for defined variable be higher than 83%.
-# Recomendation for defined variable be set to 89%.
-# A lower percentage yeilds more results, which will forcefully delete content.
 
-# Be sure to uncomment the remove command after confirming test results for deletion to occur.
 
-# If content has similar naming schemes, consider checking the average percentage with up to five files using levenshtein utility fstrcmp
-# Comp1=""
-# Comp2=""
-# x=".89"
-# fstrcmp "$Comp1" "$Comp2"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
