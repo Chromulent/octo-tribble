@@ -1,0 +1,19 @@
+
+emptyArray=( ""
+  ""
+  ""
+  ""
+)
+
+
+
+for empty in ${emptyArray[@]}; do
+  # For every file
+  for i in *;do
+    ## If the file contains the adjusted indicies then remove ' String'
+    if [[ "$i" == *"$iwaSPA"* ]]; then rename "s/$iwaSPA//g" "$i"; fi 
+    ## If the file contains the adjusted indicies then remove 'String'
+    if [[ "$i" == *"$iwaVAR"* ]]; then rename "s/$iwaVAR//g" "$i"; fi 
+  done
+
+done
