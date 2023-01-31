@@ -91,8 +91,6 @@ for ext in ${extArray[@]}; do
   
   for opVal in "${newOpArr[@]}" ; do
  
-	if [ "$ext" = ".avi" ]; then ffmpeg -y -i "$opVal" -x265-params crf=25 "${opVal%.*}.webm"; fi 
-	
 	if [[ "$ext" == *.aac* ]];    then ffmpeg -y - i "$opVal" -codec: copy "${opVal%.*}.m4a"; fi 
 	if [[ "$ext" == *.flac* ]];   then ffmpeg -y -i "$opVal" -acodec libmp3lame -ab 128k "${opVal%.*}.mp3"; fi 
 	if [[ "$ext" == *.webp* ]];   then ffmpeg -y -i "$opVal" "${opVal%.*}.png"; fi 
@@ -100,7 +98,8 @@ for ext in ${extArray[@]}; do
   if [[ "$ext" == *.3gp* ]];    then ffmpeg -y -i "$opVal" -c:v copy -c:a copy "${opVal%.*}.mp4"; fi
   if [[ "$ext" == *.mov* ]];    then ffmpeg -y -i "$opVal"  -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${opVal%.*}.webm"; fi
 	if [[ "$ext" == *.ts* ]];     then ffmpeg -y -i "$opVal" "${opVal%.*}.mp4"; fi   
-	if [[ "$ext" == *.avi* ]];    then ffmpeg -y -i "$opVal" -x265-params crf=25 "${opVal%.*}.webm"; fi 
+	# if [[ "$ext" == *.avi* ]];    then ffmpeg -y -i "$opVal" -x265-params crf=25 "${opVal%.*}.webm"; fi 
+  if [[ "$ext" == *.avi* ]];    then ffmpeg -y -i "$opVal" -c:v copy -c:a copy -y "${opVal%.*}.mp4"; fi 
 	if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -c copy "${opVal%.*}.mp4"; fi 
 	# if [[ "$ext" == *.mkv* ]];  then ffmpeg -y -i "$opVal" -vf subtitles=input.mkv "${opVal%.*}.mp4"; fi 
 	# if [[ "$ext" == *.mkv* ]];  then ffmpeg -y -i "$opVal" -c copy -c:s mov_text "${opVal%.*}.mp4"; fi 
@@ -119,8 +118,8 @@ for ext in ${extArray[@]}; do
     if [[ "$ext" == *.mkv* ]];  then if_mkv_mp4_del; fi 
     if [[ "$ext" == *.mp4* ]];  then if_mp4_webm_del; fi 
 
-	exten="*$ext"
-	mv "$exten" /mnt/octo/failed_conv/
+	# exten="*$ext"
+	# mv "$exten" /mnt/octo/failed_conv/
 
 done
 
