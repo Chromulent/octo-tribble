@@ -2,7 +2,7 @@
 
 # Variable
 
-cd '/mnt/OpenDrive/Videos/Creators'
+# cd '/mnt/OpenDrive/Videos/Creators'
 
 string_replacement () {
         for i in *;do
