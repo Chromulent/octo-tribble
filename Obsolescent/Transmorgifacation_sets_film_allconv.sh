@@ -8,6 +8,14 @@ set-title() {
   PS1=${ORIG}${TITLE}
 }
 
+if_m4v_mkv_del () {
+for f in *.m4v; do
+  [ -e "${f%.*}.mkv" ] && rm -rf "$f"
+done
+
+}
+
+# if_m4v_mkv_del
 
 if_mkv_mp4_del () {
 for f in *.mkv; do
@@ -45,6 +53,43 @@ for d in */ ; do
   cd "$d"
   UPDI="$(pwd | sed 's:.*/::')" 
   set-title "$UPDI"
+  find . -name '*.mp4' -exec sh -c 'ffmpeg -y -i "$0" -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${0%%.mp4}.webm"' {} \;
+  if_very_smol_del
+  cd ..
+done
+
+
+for d in */ ; do
+  cd "$d"
+  find . -name '*.mkv' -exec sh -c 'ffmpeg -y -i "$0" -c:v libx264 -preset medium -c:a aac "${0%%.mkv}.mp4"' {} \;
+  if_very_smol_del
+  cd ..
+done
+
+
+for d in */ ; do
+  cd "$d"
+  find . -name '*.mp4' -exec sh -c 'ffmpeg -y -i "$0" -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${0%%.mp4}.webm"' {} \;
+  if_very_smol_del
+  cd ..
+done
+
+
+for d in */ ; do
+  cd "$d"
+  if_very_smol_del
+  if_mkv_mp4_del
+  if_avi_mp4_del
+  if_mp4_webm_del
+  cd ..
+done
+
+
+
+for d in */ ; do
+  cd "$d"
+  UPDI="$(pwd | sed 's:.*/::')" 
+  set-title "$UPDI"
   if_very_smol_del
   find . -name '*.avi' -exec sh -c 'ffmpeg -y -i "$0" -x265-params crf=25 "${0%%.avi}.webm"' {} \;
   find . -name '*.mkv' -exec sh -c 'ffmpeg -y -i "$0" -c:v libx264 -preset medium -c:a aac "${0%%.mkv}.mp4"' {} \;
@@ -53,15 +98,8 @@ for d in */ ; do
   cd ..
 done
 
-for d in */ ; do
-  cd "$d"
-  UPDI="$(pwd | sed 's:.*/::')" 
-  set-title "$UPDI"
-  if_mkv_mp4_del
-  if_avi_mp4_del
-  if_mp4_webm_del
-  cd ..
-done
+
+
 
 
 
