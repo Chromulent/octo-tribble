@@ -7,12 +7,14 @@ source <(curl -L https://gist.githubusercontent.com/Chromulent/f8750e6063eb83e86
 
 # Cache Function script - Replace Underscore with Space
 source <(curl -L https://gist.githubusercontent.com/Chromulent/8ce9f4080e098b76bff807f501770fc5/raw/e35e2fc2492e87850de95d9ad530b4cbfaf41c5a/Fn_Remove_Underscore.sh)
+RUS_command
 
 # Remote Execution - Remove special characters from file names
 source <(curl -L https://gist.githubusercontent.com/Chromulent/b1970a6360977c42059824dcfe9457a0/raw/136098e02b8989a6affaab2e683e75fadb2444f0/SpecialCharacters_Filename_Cleanup.sh)
 
 # Remote Execution - Remove directory name from file names
 source <(curl -L https://gist.githubusercontent.com/Chromulent/dbe09470e94dd06335cd1045e0ee8725/raw/8f4bab7363ec7548a6acdf06cc56817f89990d2b/Fn_Remove_Directory_inFilename.sh)
+Directory_FileName_Purge
 
 # Remote Execution - Remove floating letters
 source <(curl -L https://gist.githubusercontent.com/Chromulent/298d4c35a69cf9ad647f92f45fb100eb/raw/653796f609af557330c765d912b684199016332c/FloatingLetters_Filename_Cleanup.sh)
