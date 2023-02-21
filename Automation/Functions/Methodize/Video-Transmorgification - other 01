@@ -1,0 +1,15 @@
+Video-Transmorgification - other 01
+
+
+  exten="*$ext"
+    # if [[ "$ext" == *.aac* ]];  then if_aac_m4a_del; fi 
+    # if [[ "$ext" == *.flac* ]]; then if_flac_mp3_del; fi 
+    # if [[ "$ext" == *.webp* ]]; then if_webp_png_del; fi 
+    if [[ "$ext" == *.m4v* ]];  then mv "$exten" /mnt/octo/failed_conv; fi 
+    if [[ "$ext" == *.3gp* ]];  then mv "$exten" /mnt/octo/failed_conv; fi 
+    if [[ "$ext" == *.mov* ]];  then mv "$exten" /mnt/octo/failed_conv; fi 
+    if [[ "$ext" == *.ts*  ]];  then mv "$exten" /mnt/octo/failed_conv; fi 
+    if [[ "$ext" == *.avi* ]];  then mv "$exten" /mnt/octo/failed_conv; fi 
+    if [[ "$ext" == *.mkv* ]]; then mv "$exten" /mnt/octo/failed_conv ; fi 
+    if [[ "$ext" == *.mp4* ]];  then mv "$exten" /mnt/octo/failed_conv; fi 
+    # if [[ "$ext" == *.webm* ]];  then ; fi 
