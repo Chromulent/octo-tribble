@@ -31,6 +31,7 @@ cArray=( # Resolution
   "HDTV"
   "HULU"
   "WEB"
+  "web"
   "WEB-DL"
   "WEBDL"
   "WEBRip"
@@ -41,6 +42,7 @@ cArray=( # Resolution
   "DC"
   "TELESYNC"
   "TrueHD"
+  "internal"
   # Encoding
   "5.1CH"
   "51CH"
@@ -135,17 +137,17 @@ cArray=( # Resolution
   "FGT"
   "ShAaNi"
   "RESTERED"
+  "ggez"
+  "BAE"
 )
 
 #   Define array of Omission indicies word list
 iWordArray=( "Br"
   "Rip"
   "Scr"
-  "lat"
   "dual"
   "Soup"
   "terminal"
-  "H"
 )
 
 #   Define array of Omission indicies Dot list

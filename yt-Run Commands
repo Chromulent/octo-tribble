@@ -27,3 +27,19 @@ Cleanup
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Underactive%20Functions/Cleanup/_Cleanup.sh)
 
 
+
+
+
+
+check_loop () {
+	clear
+
+	ls '/mnt/octo/sets/tvset00/Modern Family'
+	sleep 1s
+	ls '/mnt/octo/sets/tvset01/Modern Family'
+}
+
+while true; do check_loop; sleep 60; done
+
+
+
