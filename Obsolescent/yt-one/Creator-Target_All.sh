@@ -15,6 +15,8 @@ dlytDB="/home/""$UsName""/Videos/mydownloads"
 # For the content file that will contain all of the videos that we are going to attempt to download.
 contentFile="/home/""$UsName""/Downloads/yt-all_content.sh"
 
+
+#####===[ Remote Execution - Define Functions
 #########################################################################################################
 
 #   Remote Execution to define functions for ease of accessibility. 
@@ -41,8 +43,8 @@ source <(curl -L https://gist.githubusercontent.com/Chromulent/d74e5bd0190d2ba91
 }
 
 #   Add the shell utility to tell the script what to use when running the script.
-sed '1 i #!/bin/sh' /home/blackwood/Downloads/yt-all_content.sh
-echo '#!/bin/sh' > /home/blackwood/Downloads/yt-all_content.sh
+sed '1 i #!/bin/sh' "$contentFile"
+echo '#!/bin/sh' > "$contentFile"
 
 #   Here we add an empty line in order to break commands away from the interperter from the rest of the script.
 echo -en '\n' >> "$contentFile"

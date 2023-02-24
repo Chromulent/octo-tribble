@@ -15,14 +15,14 @@ dlytDB="/home/""$UsName""/Videos/mydownloads"
 # For the content file that will contain all of the videos that we are going to attempt to download.
 contentFile="/home/""$UsName""/Downloads/yt-all_content.sh"
 
+#####===[ Remote Execution - Define Functions
 #########################################################################################################
 
 #   Remote Execution to define functions for ease of accessibility. 
 ##  Test to confirm if drive is mounted to ensure download of content to the mounted drive.
 source <(curl -L https://gist.githubusercontent.com/Chromulent/17898dfe37d3dfa823e111a333ecde61/raw/3e8402cb18df3c4227a83ba890c2da09b29b87e3/Fn_Mount_Drive_Test.sh)
-
-##  Will ask for each creator's new video, and then write these to a single file to then download after we are done with the loop
-source <(curl -L https://gist.githubusercontent.com/Chromulent/d74e5bd0190d2ba91f7241d37a0eb7d1/raw/7810153bcb042372458dc055bdf0b4949b95ce09/Fn_Creator_Download.sh)
+##  Add the WhipTail function; which will let us ask for each creator; if we want their new video based on its title.
+source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Functions/Yes_or_No_Whiptail.sh)
 
 
 #####===[ Prerequisites
@@ -41,8 +41,8 @@ source <(curl -L https://gist.githubusercontent.com/Chromulent/d74e5bd0190d2ba91
 }
 
 #   Add the shell utility to tell the script what to use when running the script.
-sed '1 i #!/bin/sh' /home/blackwood/Downloads/yt-all_content.sh
-echo '#!/bin/sh' > /home/blackwood/Downloads/yt-all_content.sh
+sed '1 i #!/bin/sh' "$contentFile"
+echo '#!/bin/sh' > "$contentFile"
 
 #   Here we add an empty line in order to break commands away from the interperter from the rest of the script.
 echo -en '\n' >> "$contentFile"
@@ -64,13 +64,12 @@ echo -en '\n' >> "$contentFile"
 #  Run Function
 #########################################################################################################
 
-source <(curl -L https://gist.githubusercontent.com/Chromulent/80d3df90f30b2abdecf2d2b44dd6f838/raw/f7acd9d477165e0598db4783cf2c5dba9196b6be/Creator_Target_Defined.sh)
-
 #  The following creators are run with the script above this line: 
-#  
-# All Gas No Brakes, CGP Grey, Defunctland, Dime Store Adventures, Dreading, History Buffs, JAubrey, JCS Criminal Psychology, Jenny Nicholson, 
-# Jim Browning, Johnny Harris, Josh Strife Hayes, Last Week Tonight, Legal Eagle, Primitive Technology, Puffin Forest, Random Game Reviews, 
-# RealLifeLore, Red Letter Media, Runesmith, ShaneBrained, Shoe0nHead, Trekspertise, Wendigoon, and Zefrank.
+# 
+# Kings and Generals, Kitboga, Kurzgesagt, Linus Tech Tips, Lock Picking Lawyer, 
+# Lockstein and Gnogginm Official Nerd Cubed, PsyscoTrip, and RamZaes.
+
+source <(curl -L https://gist.githubusercontent.com/Chromulent/0480df7748fce5123c9155ee4db63ef7/raw/1014eb68474801cc58b221c5bfe0cb9f2374e7cd/Creator_Target_Defined_K-R.sh)
 
 
 #####===[ Local Execution

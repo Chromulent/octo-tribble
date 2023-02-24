@@ -15,6 +15,7 @@ dlytDB="/home/""$UsName""/Videos/mydownloads"
 # For the content file that will contain all of the videos that we are going to attempt to download.
 contentFile="/home/""$UsName""/Downloads/yt-all_content.sh"
 
+#####===[ Remote Execution - Define Functions
 #########################################################################################################
 
 #   Remote Execution to define functions for ease of accessibility. 
@@ -23,7 +24,6 @@ source <(curl -L https://gist.githubusercontent.com/Chromulent/17898dfe37d3dfa82
 
 ##  Will ask for each creator's new video, and then write these to a single file to then download after we are done with the loop
 source <(curl -L https://gist.githubusercontent.com/Chromulent/d74e5bd0190d2ba91f7241d37a0eb7d1/raw/7810153bcb042372458dc055bdf0b4949b95ce09/Fn_Creator_Download.sh)
-
 
 #####===[ Prerequisites
 #########################################################################################################
@@ -41,8 +41,8 @@ source <(curl -L https://gist.githubusercontent.com/Chromulent/d74e5bd0190d2ba91
 }
 
 #   Add the shell utility to tell the script what to use when running the script.
-sed '1 i #!/bin/sh' /home/blackwood/Downloads/yt-all_content.sh
-echo '#!/bin/sh' > /home/blackwood/Downloads/yt-all_content.sh
+sed '1 i #!/bin/sh' "$contentFile"
+echo '#!/bin/sh' > "$contentFile"
 
 #   Here we add an empty line in order to break commands away from the interperter from the rest of the script.
 echo -en '\n' >> "$contentFile"
@@ -64,13 +64,36 @@ echo -en '\n' >> "$contentFile"
 #  Run Function
 #########################################################################################################
 
-source <(curl -L https://gist.githubusercontent.com/Chromulent/80d3df90f30b2abdecf2d2b44dd6f838/raw/f7acd9d477165e0598db4783cf2c5dba9196b6be/Creator_Target_Defined.sh)
+source <(curl -L https://gist.githubusercontent.com/Chromulent/a238d890bc01f1c89b09466571e3abaf/raw/dec4ab0967f612a4bb35ec84fc006a5a68ffc448/Creator_Target_Defined_A-C.sh)
 
 #  The following creators are run with the script above this line: 
-#  
-# All Gas No Brakes, CGP Grey, Defunctland, Dime Store Adventures, Dreading, History Buffs, JAubrey, JCS Criminal Psychology, Jenny Nicholson, 
-# Jim Browning, Johnny Harris, Josh Strife Hayes, Last Week Tonight, Legal Eagle, Primitive Technology, Puffin Forest, Random Game Reviews, 
-# RealLifeLore, Red Letter Media, Runesmith, ShaneBrained, Shoe0nHead, Trekspertise, Wendigoon, and Zefrank.
+# 
+# Ashens, Billiam, Bosnian Bill, Brandon Sanderson, Captain Dillusion
+# ClickSpring, Comedy Cheat Codes, Court of Source, and Cosmonaut Vareity Hour
+
+
+source <(curl -L https://gist.githubusercontent.com/Chromulent/35f58a78257d16cabfd35918a21df88d/raw/ef82ec6d7efe3e8590a3117a822c0444b6e50571/Creator_Target_Defined_E-K.sh)
+
+#  The following creators are run with the script above this line: 
+# 
+# Extra Credits, Fredrick Knudsen, Historia Civilis, Ishitani Furiture, Illuminaughtii
+# Invicta, Jim Sterling, Karl Jobst, and Killian Experience. 
+
+
+source <(curl -L https://gist.githubusercontent.com/Chromulent/0480df7748fce5123c9155ee4db63ef7/raw/1014eb68474801cc58b221c5bfe0cb9f2374e7cd/Creator_Target_Defined_K-R.sh)
+
+#  The following creators are run with the script above this line: 
+# 
+# Kings and Generals, Kitboga, Kurzgesagt, Linus Tech Tips, Lock Picking Lawyer, 
+# Lockstein and Gnogginm Official Nerd Cubed, PsyscoTrip, and RamZaes.
+
+
+source <(curl -L https://gist.githubusercontent.com/Chromulent/9db8d4e931fd1b90a78810cc568a7b43/raw/1714af96d7369425d5a993f432df94bdb8a5d420/Creator_Target_Defined_R-Z.sh)
+
+#  The following creators are run with the script above this line: 
+# 
+# Regular Cars, Watcher, Shoddy Cast, Storied, The Brain Scoop, The Game Theorists, Thomas Franklin, 
+# and, Zee Bashew.
 
 
 #####===[ Local Execution
@@ -79,4 +102,3 @@ source <(curl -L https://gist.githubusercontent.com/Chromulent/80d3df90f30b2abde
 # With the information collected; we can now download any possible file from all possible creators:
 
 sh "$contentFile"
-
