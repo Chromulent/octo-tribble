@@ -31,15 +31,22 @@ source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/
 
 
 
+dir1="/mnt/octo/sets/tv/Judge Judy"
+
+dir2="/media/bw/Xi/sets/tv/Judge Judy"
+
 check_loop () {
 	clear
 
-	ls '/mnt/octo/sets/tvset00/Modern Family'
+	echo "${dir1}"
+	ls "${dir1}"
 	sleep 1s
-	ls '/mnt/octo/sets/tvset01/Modern Family'
+	echo "${dir2}"
+	ls "${dir2}"
 }
 
 while true; do check_loop; sleep 60; done
+
 
 
 
