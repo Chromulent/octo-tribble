@@ -6,7 +6,7 @@ import re
 channel = "https://www.youtube.com/channel/UC3cpN6gcJQqcCM6mxRUo_dA"
 
 html = requests.get(channel + "/videos").text
-url = "https://www.youtube.com/watch?v=" + re.search('(?<="videoId":").*?(?=")', html).group()
+url = "https://www.youtube.com/watch?v=" + re.search('(?<="videoId":").*?(?=")', html)
 
 
 ytvid = print(url) 
