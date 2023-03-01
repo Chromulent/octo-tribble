@@ -107,11 +107,12 @@ Vid-T () {
         if [[ "$ext" == *.3gp* ]];    then ffmpeg -y -i "$opVal" -c:v copy -c:a copy "${opVal%.*}.mp4"; fi
         if [[ "$ext" == *.mov* ]];    then ffmpeg -y -i "$opVal"  -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${opVal%.*}.webm"; fi
         if [[ "$ext" == *.ts* ]];     then ffmpeg -y -i "$opVal" "${opVal%.*}.mp4"; fi   
-    # if [[ "$ext" == *.avi* ]];    then ffmpeg -y -i "$opVal" -x265-params crf=25 "${opVal%.*}.webm"; fi 
+      # if [[ "$ext" == *.avi* ]];    then ffmpeg -y -i "$opVal" -x265-params crf=25 "${opVal%.*}.webm"; fi 
         if [[ "$ext" == *.avi* ]];    then ffmpeg -y -i "$opVal" -c:v copy -c:a copy -y "${opVal%.*}.mp4"; fi 
-        if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -c copy "${opVal%.*}.mp4"; fi 
-    # if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -vf subtitles=input.mkv "${opVal%.*}.mp4"; fi 
-    # if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -c copy -c:s mov_text "${opVal%.*}.mp4"; fi 
+      # if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -c copy "${opVal%.*}.mp4"; fi 
+        if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -map 0:v -c:a aac -c:v copy "${opVal%.*}.mp4"; fi 
+      # if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -vf subtitles=input.mkv "${opVal%.*}.mp4"; fi 
+      # if [[ "$ext" == *.mkv* ]];    then ffmpeg -y -i "$opVal" -c copy -c:s mov_text "${opVal%.*}.mp4"; fi 
         if [[ "$ext" == *.mp4* ]];    then ffmpeg -y -i "$opVal" -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis "${opVal%.*}.webm"; fi 
     done   
 
