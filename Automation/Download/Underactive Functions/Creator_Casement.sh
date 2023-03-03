@@ -1,3 +1,5 @@
+#!/bin/sh
+
 Creator_Casement () {
     source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/subscribers/Defined/channel_array.sh)
 
