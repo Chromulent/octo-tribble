@@ -125,12 +125,15 @@ Creator_Casement () {
         m=0;
         until [ $n -ge $ti ]
         do
-        lastvar="$( echo "${titleIDs[$m]}" | sed 's/^ *//g' )"
-        videoUri="${ytWatch}${lastvar}"
-        videoVar="${videoUri}"
-        Creator_Download
-        ((n++))
-        ((m++))
+            lastvar="$( echo "${titleIDs[$m]}" | sed 's/^ *//g' )"
+            videoUri="${ytWatch}${lastvar}"
+            videoVar="${videoUri}"
+                if [[ "$ChannelName" == *"&amp"* ]] ; then ChannelName="$( echo "${ChannelName}" | sed 's/&amp;/and/g'  )"; fi
+                if [[ "$ChannelName" == *"& amp"* ]]; then ChannelName="$( echo "${ChannelName}" | sed 's/& amp;/and/g' )"; fi
+
+            Creator_Download
+            ((n++))
+            ((m++))
         done
 
 
