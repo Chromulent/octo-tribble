@@ -66,8 +66,8 @@ Vid-T () {
   #=====[ Perform Cleanup on directory
   # after the conversion if the file is too small then delete it, and if the extension matches a file that we converted from then delete the original. 
   source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Functions/DeDupe-Directory.sh)
-  # DeDupe-Dir
+  DeDupe-Dir
 
 }
 
-Vid-T
+Vid-Tv2
