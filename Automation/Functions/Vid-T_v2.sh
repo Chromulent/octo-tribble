@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Vid-T () {
+Vid-Tv2 () {
 
   #=====[ Array Definition and Population 
     #   First we define an empty array that we will populate 
