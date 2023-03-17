@@ -28,11 +28,13 @@ Cleanup_OpenDrive () {
 	mkvarray="$(find . -name '*.mkv')"; 
 	mp4array="$(find . -name '*.mp4')"; 
 	aviarray="$(find . -name '*.avi')"; 
+	webmarray="$(find . -name '*.webm')"; 	
 
 	if [ ${#m4varray[@]} -gt 0 ]; then find . -type f -name "*.m4v" -exec mv {} "${dirPart}" \;; fi
 	if [ ${#mkvarray[@]} -gt 0 ]; then find . -type f -name "*.mkv" -exec mv {} "${dirPart}" \;; fi
 	if [ ${#mp4array[@]} -gt 0 ]; then find . -type f -name "*.mp4" -exec mv {} "${dirPart}" \;; fi
 	if [ ${#aviarray[@]} -gt 0 ]; then find . -type f -name "*.avi" -exec mv {} "${dirPart}" \;; fi
+	if [ ${#webmarray[@]} -gt 0 ]; then find . -type f -name "*.webm" -exec mv {} "${dirPart}" \;; fi
 
 	# remove all possible files that are with all possible subfolders
 	find . -mindepth 1 -type f -name "*.sub" -exec rm -rf {} \; 
@@ -52,6 +54,7 @@ Cleanup_OpenDrive () {
 	if [ ${#mkvarray[@]} -gt 0 ]; then mv *.mkv "${dirFull}" ; fi
 	if [ ${#mp4array[@]} -gt 0 ]; then mv *.mp4 "${dirFull}" ; fi
 	if [ ${#aviarray[@]} -gt 0 ]; then mv *.avi "${dirFull}" ; fi
+	if [ ${#webmarray[@]} -gt 0 ]; then mv *.webm "${dirFull}" ; fi
 
 }
 
