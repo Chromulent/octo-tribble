@@ -8,7 +8,10 @@ Cleanup_octo () {
 	setsOctoAnime="/mnt/octo2/sets/anime/"
 
 	dirPart=$(pwd)
-	serName="$(cut -c 14- <<< $dirPart)"
+	IFS='/'
+	read -ra partPort <<< "$dirPart"
+
+	serName="$(echo "${partPort[-1]}")"
 
 	echo "What directory are we targeting?"
 

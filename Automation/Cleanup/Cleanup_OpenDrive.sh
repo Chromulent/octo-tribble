@@ -8,7 +8,10 @@ Cleanup_OpenDrive () {
 	setsOpenDriveAnime="/mnt/OpenDrive3/Videos/Anime/"
 
 	dirPart=$(pwd)
-	serName="$(cut -c 14- <<< $dirPart)"
+	IFS='/'
+	read -ra partPort <<< "$dirPart"
+
+	serName="$(echo "${partPort[-1]}")"
 
 	echo "What directory are we targeting in OpenDrive?"
 
