@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Function_Name () {
+SpecialCharacters_Removal () {
 	# Remove apostrophes from all file names
 	find . -mindepth 1 -name "*'*" -type f -exec rename "s/'//g" '{}' \;
 
@@ -29,13 +29,4 @@ Function_Name () {
 	# find . -mindepth 1 -name "**" -type f -exec rename "s/\ //g" '{}' \;
 
 }
-
-
-
-
-
-
-
-
-
 
