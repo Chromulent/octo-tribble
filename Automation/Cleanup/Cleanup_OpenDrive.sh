@@ -8,6 +8,9 @@ Cleanup_OpenDrive () {
 	setsOpenDriveAnime="/mnt/OpenDrive3/Videos/Anime/"
 
 
+	# find . -type d -name "Subs" -exec rm -rf "{}" \;
+
+
 	printf "Please pick from the following list:\n\n\ttv\n\tfilm\n\tanimated\n\tanime\n\n"
 
 	dirPart=$(pwd)
