@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #   Write Function that we will use to write content to the contentfile to download videos.
 Case_Function () {
 #  Case allows us to to create a default set of variables so that in the next section we can run through any possible creator that we have on this list.
