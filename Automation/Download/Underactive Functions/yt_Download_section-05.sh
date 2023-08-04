@@ -1,3 +1,5 @@
+#   Write Function that we will use to write content to the contentfile to download videos.
+Case_Function () {
 #  Case allows us to to create a default set of variables so that in the next section we can run through any possible creator that we have on this list.
     case "$ChannelName" in 
     "All Gas No Brakes") subdirout='/mnt/OpenDrive3/Videos/Creators/All Gas No Brakes/%(title)s.%(ext)s' ; exFilter="" ;;
@@ -90,3 +92,7 @@
     "Zullie the Witch") subdirout='/mnt/OpenDrive3/Videos/Creators/Zulliethe Witch/%(title)s.%(ext)s' ; exFilter_prefix=' --match-filter "title ~= (?i)"' ; filterVarible="Elden" ; exFilter_suffix='" ' ; exFilter="${exFilter_prefix}${filterVarible}${exFilter_suffix}" ;;
     #"") subdirout='/mnt/OpenDrive3/Videos/Creators//%(title)s.%(ext)s' ; exFilter="" ;;
     esac
+
+}
+
+
