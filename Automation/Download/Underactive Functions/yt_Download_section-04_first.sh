@@ -44,22 +44,8 @@ for VidChan in "${vidArray[@]}"; do
 #  This is loaded in above before the loop for each creator and nested within a function.
     Case_Function
 
-#  Here we reset the n and m variables that need to be offset to account for the ChannelName taking up place 0 on the titles ID. 
-    clear
-    # n is for the title set
-    n=1;
-    # m is for the video set
-    m=0;
-    until [ $n -ge $ti ]
-    do
-        vidVar="$( echo "${videoIDs[$m]}" | sed 's/^ *//g' )"
-        videoUri="${ytWatch}${vidVar}"
-        videoVar="${videoUri}"
-
-        Creator_Download
-        ((n++))
-        ((m++))
-    done
+#  Set this into motion
+	videoVar="$(echo "${channelID}")"
 
 	Creator_Download
     echo "Collecting channel: ${ChannelName}"
