@@ -1,9 +1,7 @@
 #!/bin/sh
 
-
 ## Attempt to reconstruct and shrink files and remove complexity by adding integration 
 ## This file will be constructed as the broken down version, but each section that could cause confusion reduced to a file to download and load the variable / array / contents.
-
 
 #####===[ Define Variables
 #########################################################################################################
@@ -35,14 +33,10 @@
 
 ##  Script file where we download videos
 #   Alter the script to remove past content
-sed -i d "$contentFile"
-
 #   Add the shell utility to tell the script what to use when running the script.
-sed '1 i #!/bin/sh' "$contentFile"
-echo '#!/bin/sh' > "$contentFile"
-
 #   Here we add an empty line in order to break commands away from the interperter from the rest of the script.
-echo -en '\n' >> "$contentFile"
+
+    source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Underactive%20Functions/yt_Download-Section-02.sh)
 
 
 #####===[ Local Execution - Define Functions and Arrays
@@ -60,7 +54,6 @@ Creator_Download () {
 
 #####===[ Local Execution
 #########################################################################################################
-
 
 ##   Create the function that will attempt to iterate through each indicie -- this is in an attempt to resolve a needing to download this function for each creator.
 #  For each Creator Channel ID within the Creator Video Array.
@@ -81,5 +74,34 @@ Creator_Download () {
 #  Call the Created_Download function to run its course and store each set of videos inside of our content file. 
 
 source <(curl -L https://raw.githubusercontent.com/Chromulent/octo-tribble/main/Automation/Download/Underactive%20Functions/yt_Download_section-04.sh)
+
+
+#####===[ Begin Downloading with local execution
+#########################################################################################################
+
+sh "$contentFile"
+
+
+#####===[ Information for further script execution
+#########################################################################################################
+
+## REGEX filter - Titles
+# ; exFilter_prefix=' --match-filter "title ~= (?i)"' ; filterVarible="REGEX" ; exFilter_suffix='" ' ; exFilter="${exFilter_prefix}${filterVarible}${exFilter_suffix}"
+
+## REGEX filter - Description
+# ; exFilter_prefix=' --match-filter "description ~= (?i)"' ; filterVarible="REGEX" ; exFilter_suffix='" ' ; exFilter="${exFilter_prefix}${filterVarible}${exFilter_suffix}"
+
+## REGEX filter - Duration
+# ; exFilter_prefix=' --match-filter "description ~= (?i)"' ; filterVarible="REGEX" ; exFilter_suffix='" ' ; exFilter="${exFilter_prefix}${filterVarible}${exFilter_suffix}"
+
+## Multiple filters for duration within a single forced variable
+# exFilter=' --match-filter="duration<150" --match-filter "duration>360" '
+
+## Multiple filters within a single forced variable
+# exFilter=' --match-filter "title ~= (?i)Fallout" --match-filter "description!~='#fallout'" --match-filter "description!~='#Fallout'" '
+
+
+## Do not download LIVE videos of any kind
+# ; exFilter_prefix=' --match-filter "' ; filterVarible='!is_live & !live' ; exFilter_suffix='" ' ; exFilter="${exFilter_prefix}${filterVarible}${exFilter_suffix}"
 
 
