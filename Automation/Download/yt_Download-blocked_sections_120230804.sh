@@ -18,7 +18,7 @@
 	dlytDB="/home/""$UsName""/Videos/mydownloads" # Default
 
 # For the content file that will contain all of the videos that we are going to attempt to download.
-contentFile="/home/""$UsName""/Downloads/yt-all_content.sh"
+    contentFile="/home/""$UsName""/Downloads/yt-all_content.sh"
 
 #  Prefix for the Channel ID of each Creator within the Creator Video Array.
     ytChantem="https://www.youtube.com/channel/"
